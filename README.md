@@ -1,6 +1,4 @@
-# GDP Starter project
-
-Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+# TerapicFisicHelper-LadingPage
 
 ## Comandos
 
