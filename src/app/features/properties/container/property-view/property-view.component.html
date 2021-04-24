@@ -1,0 +1,22 @@
+<div class="properties-view">
+  <div class="title pl-3 pb-2">Habitaciones:</div>
+  <gdp-images [propurl]="property.imageurl"></gdp-images>
+  <div class="info-col p-4">
+    <div class="price" style="font-size: 25px; font-weight: 500;">{{ property.cost }} por mes</div>
+    <div class="direction">
+      {{ property.description }}
+    </div>
+    <div class="description">
+      {{ property.nRoom }} cuartos,
+      {{ property.cant_bath }} baños,
+      {{ property.size }} m cuadrados,
+      {{ property.cant_beds }} camas,
+    </div>
+    <div class="rate">
+      {{ property.score }}
+      <span class="material-icons">
+        stars
+      </span>
+    </div>
+  </div>
+</div>

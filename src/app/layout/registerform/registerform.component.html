@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>Registro</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="pb-2 d-flex justify-content-center">
+        <button mat-stroked-button (click)="sendStudent()">Usuario</button>
+        <p class="m-0 px-2">o</p>
+        <button mat-stroked-button color="primary" (click)="sendProvider()">Rehabilitador</button>
+    </div>
+    <form class="example-form px-2" [formGroup]="form" (ngSubmit)="submit(form.value)">
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td class="pr-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>First name</mat-label>
+                        <input formControlName="firstName" matInput>
+                    </mat-form-field>
+                </td>
+                <td class="pl-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Last Name</mat-label>
+                        <input formControlName="lastName" matInput>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td class="pr-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>DNI</mat-label>
+                        <input formControlName="dni" matInput>
+                    </mat-form-field>
+                </td>
+                <td class="pl-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Phone</mat-label>
+                        <input formControlName="phone" matInput>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            <mat-form-field class=" w-100 example-full-width">
+                <mat-label>Adress</mat-label>
+                <input formControlName="adress" matInput>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class=" w-100 example-full-width">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class=" w-100 example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" formControlName="password" matInput>
+            </mat-form-field>
+        </p>
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button color="primary" type="submit" [mat-dialog-close]="true" style="background-color:#30A6CA;color:white">Registrar</button>
+    </form>
+</mat-dialog-content>

@@ -1,0 +1,26 @@
+<div class="properties">
+  <div class="title pl-3 pb-2">Habitaciones:</div>
+  <div class="search-wrapper pl-3 pb-2">
+    <gdp-propsearch
+      (selectedOptOut)="search($event)"
+      [selectedOpt]="searchTypeSelected"
+      [searchValue]="searchString"
+    ></gdp-propsearch>
+  </div>
+  <div class="buttons d-flex pb-4">
+    <div class="button-1">
+      <div>Tipos de Inmuebles</div>
+    </div>
+    <div class="button-2">
+      <div>Precios</div>
+    </div>
+  </div>
+  <div class="list">
+    <div *ngFor="let item of properties">
+      <gdp-prop
+        *ngIf="item.active"
+        [prop]="item"
+      ></gdp-prop>
+    </div>
+  </div>
+</div>

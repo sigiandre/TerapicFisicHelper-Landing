@@ -1,0 +1,97 @@
+<mat-toolbar class="navbar toolbar" (scroll)="onWindowScroll($event)">
+    <!-- <div>
+        <img style="" src="assets/img/logo.png" />
+    </div> -->
+    <div class="d-flex justify-content-lg-around">
+        <ul class="d-none navigation-items d-flex m-0 w-100" style="list-style: none">
+            <div class="icon-wrapper d-flex">
+                <li class="px-4">
+                    <img style="max-height: 64px" class="country-image" src="assets/img/daf82369-610a-4f3b-ba00-be955d5e9f3d.png" />
+                </li>
+                <div class="text d-flex justify-content-center align-center" style="
+            color: white;
+            font-size: 25px;
+            font-weight: 500;
+            text-align: center;
+            align-items: center;
+          ">
+                    Terapic Fisic Helper
+                </div>
+            </div>
+            <!-- <li class="px-4">
+                <a routerLink="/owner">Ayuda</a>
+            </li> -->
+            <!-- <li *ngIf="!userlogin" class="px-4">
+                <a (click)="openDialogLogin()" routerLink="/account">Iniciar Seción</a>
+            </li>
+            <li *ngIf="!userlogin" class="px-4">
+                <a (click)="openDialogRegister()" routerLink="/account">Registrarse</a>
+            </li> -->
+            <li *ngIf="userlogin" class="px-4">
+                <a (click)="openDialogRegisterProperty()" routerLink="/account">Agregar Rehabilitador</a
+        >
+      </li>
+    </ul>
+    <div
+      *ngIf="userlogin"
+      class="d-flex justify-content-lg-end"
+      style="position: absolute; right: 15px; top: 15px"
+    >
+      <div>hola {{ userlogin.user }}</div>
+      <span class="pt-1 material-icons"> account_box </span>
+      <a class="pl-2" style="font-size: 10px" (click)="closeSesion()"
+        >Cerrar Session</a
+      >
+    </div>
+  </div>
+</mat-toolbar>
+<mat-toolbar
+  class="navbar-mobile toolbar d-flex justify-content-between"
+  (scroll)="onWindowScroll($event)"
+>
+  <div class="icon-wrapper d-flex">
+    <img
+      style="max-height: 46px; max-width: 46px"
+      class="country-image"
+      src="assets/img/daf82369-610a-4f3b-ba00-be955d5e9f3d.png"
+    />
+    <div
+      class="text d-flex justify-content-center align-center"
+      style="
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        align-items: center;
+      "
+    >
+      Terapic Fisic Helper
+    </div>
+  </div>
+  <div *ngIf="open"(click)="openModal()">
+    <img style="height: 20px; width: 20px" src="assets/img/menu.png" />
+  </div>
+  <!-- <div>
+      <img style="" src="assets/img/logo.png" />
+  </div> -->
+</mat-toolbar>
+<div *ngIf="open" class="drag d-flex justify-content-center flex-column">
+  <ul
+    class="d-flex justify-content-center flex-column navigation-items d-flex m-0 w-100"
+    style="list-style: none"
+  >
+    <li class="px-4">
+      <a routerLink="/owner">Ayuda</a>
+            </li>
+            <!-- <li *ngIf="!userlogin" class="px-4">
+                <a (click)="openDialogLogin()" routerLink="/account">Iniciar Seción</a>
+            </li>
+            <li *ngIf="!userlogin" class="px-4">
+                <a (click)="openDialogRegister()" routerLink="/account">Registrarse</a>
+            </li> -->
+            <li *ngIf="userlogin" class="px-4">
+                <a (click)="openDialogRegisterProperty()" routerLink="/account">Agregar Rehabilitador</a
+      >
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+<gdp-list-header></gdp-list-header>
+<gdp-list-filter></gdp-list-filter>
+
+<mat-list>
+  <mat-list-item style="cursor: pointer;" (click)="onItemSelected(item)" matRipple *ngFor="let item of list">
+    <div mat-line>{{item?.name}}</div>
+    <div mat-line>{{item?.premiereTimestamp | date: 'fullDate'}}</div>
+    <mat-icon [color]="item?.available ? 'primary' : 'warn'">{{item?.available ? 'check_circle': 'block'}}</mat-icon>
+  </mat-list-item>
+</mat-list>
+
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>

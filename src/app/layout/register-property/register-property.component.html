@@ -1,0 +1,67 @@
+<h2 mat-dialog-title>Registro</h2>
+<mat-dialog-content class="mat-typography">
+    <form class="example-form px-2" [formGroup]="form" (ngSubmit)="submit(form.value)">
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td class="pr-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Costo</mat-label>
+                        <input formControlName="cost" matInput>
+                    </mat-form-field>
+                </td>
+                <td class="pl-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Descripcion</mat-label>
+                        <input formControlName="description" matInput>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td class="pr-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Cantidad de baños</mat-label>
+                        <input formControlName="cant_bath" matInput>
+                    </mat-form-field>
+                </td>
+                <td class="pl-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Cantidad de camas</mat-label>
+                        <input formControlName="cant_beds" matInput>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td class="pr-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Cantidad de habitaciones</mat-label>
+                        <input formControlName="nRoom" matInput>
+                    </mat-form-field>
+                </td>
+                <td class="pl-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>aare en metros cuadrados</mat-label>
+                        <input formControlName="size" matInput>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <mat-form-field class=" w-100 example-full-width">
+                <mat-label>Adress</mat-label>
+                <input formControlName="adress" matInput>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class=" w-100 example-full-width">
+                <mat-label>imagen para la habitación</mat-label>
+                <input formControlName="imageurl" matInput>
+            </mat-form-field>
+        </p>
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button color="primary" type="submit" [mat-dialog-close]="true" style="background-color:#30A6CA;color:white">Registrar</button>
+    </form>
+</mat-dialog-content>

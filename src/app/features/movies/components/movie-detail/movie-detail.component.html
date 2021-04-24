@@ -1,0 +1,19 @@
+<mat-card-header>
+  <!-- <div mat-card-avatar class="example-header-image"></div> -->
+  <mat-card-title class="d-flex align-items-center">
+    {{ movie?.name }}
+    <mat-icon class="ml-2" [color]="movie?.available ? 'primary' : 'warn'">
+      {{movie?.available ? 'check_circle': 'block'}}
+    </mat-icon>
+  </mat-card-title>
+  <mat-card-subtitle [class]="movie?.available ? 'gdp-success' : 'gdp-warn'">
+    {{ movie?.available ? 'Disponible' : 'No disponible' }}
+  </mat-card-subtitle>
+  <mat-card-subtitle class="mb-2">Premiere at {{ movie?.premiereTimestamp | date: 'fullDate' }}</mat-card-subtitle>
+  <mat-card-subtitle class="font-weight-bold">ID: {{ movie?.id }}</mat-card-subtitle>
+</mat-card-header>
+<mat-card-content>
+  <p>
+    {{ movie?.description }}
+  </p>
+</mat-card-content>

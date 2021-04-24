@@ -1,0 +1,52 @@
+<!-- card de seleccion de criterio de busqueda -->
+<mat-button-toggle-group *ngIf="(searchValue && selectedOpt) || (!searchValue && !selectedOpt)" name="fontStyle" aria-label="Font Style">
+  <mat-button-toggle value="1" (click)="asignselectedOpt(1)">{{
+    selectedOpt == 1 ? searchValue : "Hábitación/Departamento"
+  }}</mat-button-toggle>
+  <mat-button-toggle value="2" (click)="asignselectedOpt(2)">{{
+    selectedOpt == 2 ? searchValue : "Roommate"
+  }}</mat-button-toggle>
+  <mat-button-toggle value="3" (click)="asignselectedOpt(3)">{{
+    selectedOpt == 3 ? searchValue : "Anfitrión"
+  }}</mat-button-toggle>
+</mat-button-toggle-group>
+<!-- card de busqueda -->
+<mat-card *ngIf="!searchValue && selectedOpt" class="example-card" style="width: 75%;">
+  <mat-card-header class="d-flex">
+    <div class="options d-flex">
+      <button mat-button (click)="asignselectedOpt(1)">Hábitción/Departamento /</button>
+      <button mat-button (click)="asignselectedOpt(2)">Roommate /</button>
+      <button mat-button (click)="asignselectedOpt(3)">Anfitrión</button>
+    </div>
+  </mat-card-header>
+
+  <mat-card-content class="d-flex justify-content-center">
+    <div class="searh-form-container" style="width: 90%;">
+      <form
+        #myform="ngForm"
+        (ngSubmit)="sendSearch(myform)"
+        class="form form-register"
+      >
+        <mat-form-field style="width: 90%;" appearance="legacy">
+          <span [ngSwitch]="selectedOpt">
+            <p *ngSwitchCase="1">
+              <mat-label>Busca tu Hábitción/Departamento</mat-label>
+            </p>
+            <p *ngSwitchCase="2">
+              <mat-label>Busca tu Roommate</mat-label>
+            </p>
+            <p *ngSwitchCase="3">
+              <mat-label>Busca tu Anfitrión</mat-label>
+            </p>
+            <p *ngSwitchDefault>
+              <mat-label>Busca tu Hábitción/Departamento</mat-label>
+            </p>
+          </span>
+          <input name="searchValue" placeholder="Que deseas Buscar?..." ngModel matInput/>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <button type="submit" class="ml-2" mat-raised-button color="primary">Save</button>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>

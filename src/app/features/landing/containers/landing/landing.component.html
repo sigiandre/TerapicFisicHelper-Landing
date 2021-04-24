@@ -1,0 +1,396 @@
+<div>
+    <div class="hero" style="background-color:red;">
+        <div class="hero-layout">
+        </div>
+        <div class="hero-text">Se parte de nuestra compañía. Empieza a entrenarte y a mantener un cuerpo en
+            <div style="color:#30A6CA;;">forma y saludable.</div>
+        </div>
+        <div class="buttons-wrapper">
+            <a class="button-1" href="https://www.apple.com/la/ios/app-store/">
+                <img class="button-image" img src="assets/img/aplicacion.png">
+                <div>AppStore</div>
+            </a>
+            <a class="button-2" href="https://play.google.com/store?hl=es-419">
+                <img class="button-image" img src="assets/img/google_play.png">
+                <div>GooglePlay</div>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="countries-wrapper container pt-4 d-flex justify-content-center" style="padding-left:8%;padding-right: 8%;">
+        <mat-card class="w-75">
+            <mat-card-header>
+                <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                    <mat-button-toggle value="bold">Habitación</mat-button-toggle>
+                    <mat-button-toggle value="italic">Departamento</mat-button-toggle>
+                    <mat-button-toggle value="underline">Roommate</mat-button-toggle>
+                </mat-button-toggle-group>
+            </mat-card-header>
+            <mat-card-content class="p-2">
+                <mat-form-field class="example-full-width w-75">
+                    <mat-label>Ubicación</mat-label>
+                    <textarea matInput placeholder="Agrege ubicación de referencia"></textarea>
+                </mat-form-field>
+                <button  [routerLink]="'/properties'" class="ml-4" mat-raised-button color="primary">Buscar</button>
+            </mat-card-content>
+        </mat-card>
+    </div> -->
+    <div class="countries-wrapper container " style="padding:5%; ">
+        <mat-grid-list [cols]="breakpoint" rowHeight="3:2 " (window:resize)="onResize($event) ">
+            <mat-grid-tile [routerLink]="'/properties'" *ngFor="let item of countries" class="country-wrapper ">
+                <div class="country">
+                    <div class="country-content">
+                        <img class="country-image" [src]="item.image" />
+                        <div class="pt-3 pb-1" style="line-height: 18px;">{{item.name}}</div>
+                        <div class="pt-2 content" style="max-width:180px;">{{item.content}}</div>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-1 container " style="padding:5%; ">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-md-4" style="background-color: #1E203D;">
+                    <mat-card-header>
+                        <div class="d-flex justify-content-center flex-column">
+                            <div class="section-1-name pb-3">¿Listo Para Comenzar tu nueva experiencia?</div>
+                            <p style="color: white;">En terapic fisic helper podrás obtener una sesión personalizada, las veces que desees, con tu entrenador o rehabilitador en vivo, solo tendrías que reservar una cita para poder ser atendido. Asimismo, te ayudaremos a mantener una
+                                vida saludable, el cual, prevendrá ciertas enfermedades como enfermedades cardíacas, sobrepeso, presión arterial alta, entre otros, que a futuro estas pueden llegar a matarte.
+                            </p>
+                        </div>
+                    </mat-card-header>
+                    <!-- <mat-card-content class="d-flex justify-content-center" style="padding-top:50px;border-radius:25px">
+                        <button [routerLink]="'/properties'" mat-raised-button class="btn" color="primary">Empezar</button>
+                    </mat-card-content> -->
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="country-wrapper ">
+                <img style="max-height:350px" class="country-image" src="assets/img/imagess.png" />
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-2 d-flex flex-column flex-md-row py-4">
+        <div class="h-50 w-100 d-flex justify-content-center">
+            <div class="content d-flex flex-column justify-content-start px-4">
+                <p style="font-size:25px ">¿Por qué suscribirte?</p>
+                <p style="font-size:16px;max-width:550px">
+                    Nuestro objetivo es poder brindar servicios de entrenamiento físico y de rehabilitación, de tal manera que los clientes que se inscriban se sientan a gusto con los servicios brindados y tengan una experiencia con el uso periódico del mismo para poder
+                    mejorar su calidad de vida y prever enfermedades futuras.
+                </p>
+                <mat-card-content class="d-flex justify-content-center " style="border-radius:25px">
+                    <button [routerLink]=" '/properties' " class="button" color="warn">Empezar</button>
+                </mat-card-content>
+            </div>
+        </div>
+    </div>
+    <div class="section-1 container " style="padding:5%; ">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="country-wrapper ">
+                <div style="padding: 10px;background-color: white;">
+                    <img style="max-height:200px" class="country-image" src="assets/img/Image -8@2x.png" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <mat-card-header>
+                        <div class="d-flex justify-content-center flex-column">
+                            <p style="max-width:400px;color: white;">
+                                Trabajar en esta compañía ha hecho destacar mis habilidades profesionales, de tal manera que he podido ayudar a muchas personas a mantener un buen estado físico y llevar una buena alimentación.
+                            </p>
+                            <p style="text-align: right;color: whitesmoke;">
+                                Jessica Simons
+                            </p>
+                        </div>
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-1 container " style="padding:5%; ">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <div class="d-flex justify-content-center flex-column">
+                        <mat-card-header>
+                            <div class="d-flex justify-content-center flex-column">
+                                <p style="max-width:400px;color: white;">
+                                    Mantenerse en forma es algo muy importante para nuestra vida, ya que nos permite estar más activos al realizar nuestras actividades. Asimismo, regula las cifras de presión arterial.
+                                </p>
+                                <p style="text-align: right;color: whitesmoke;">
+                                    Johana Tizon
+                                </p>
+                            </div>
+                        </mat-card-header>
+                    </div>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="country-wrapper ">
+                <div style="padding: 10px;background-color: white;">
+                    <img style="max-height:200px" class="country-image" src="assets/img/iii.png" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-1 container " style="padding:5%; ">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <div class="d-flex justify-content-center flex-column">
+                        <mat-card-header>
+                            <div class="d-flex justify-content-center flex-column">
+                                <p style="max-width:400px;color: white;">
+                                    Llevo más de 20 años ayudando a las personas a recuperarse de alguna lesión que ellos puedan presentar. Es agradable ver cómo las personas se van recuperando poco a poco de sus lesiones.
+                                </p>
+                                <p style="text-align: right;color: whitesmoke;">
+                                    Mary Carmen Tafur
+                                </p>
+                            </div>
+                        </mat-card-header>
+                    </div>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <div class="d-flex justify-content-center flex-column">
+                        <mat-card-header>
+                            <div class="d-flex justify-content-center flex-column">
+                                <p style="max-width:400px;color: white;">
+                                    Es un honor trabajar en esta compañía. Ayudo a las personas a recuperarse de su lesión con mucha paciencia y siempre dándole ánimos a los pacientes.
+                                </p>
+                                <p style="text-align: right;color: whitesmoke;">
+                                    Pedro Orquideo
+                                </p>
+                            </div>
+                        </mat-card-header>
+                    </div>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <!-- <div class="section-2 d-flex flex-column flex-md-row py-4">
+        <div class="h-50 w-100  d-flex justify-content-center">
+            <div class="content d-flex flex-column justify-content-start px-4">
+                <p style="font-size:25px ">¡¡¡¡Estamos a tu disposición, NO PIERDAS TIEMPO!!!!</p>
+                <p style="font-size:16px;max-width:550px">
+                    Inscríbete en nuestra compañía, ya que te brindamos servicios de entrenamiento físico y/o rehabilitación
+                </p>
+                <mat-card-content class="d-flex justify-content-center " style="border-radius:25px">
+                    <button [routerLink]=" '/properties' " class="button" color="warn">Empezar</button>
+                </mat-card-content>
+            </div>
+        </div>
+    </div> -->
+    <div class="section-2 d-flex flex-column flex-md-row py-4">
+        <div class="h-50 w-100  d-flex justify-content-center">
+            <div class="content d-flex flex-column justify-content-start px-4">
+                <!-- <p style="font-size:25px ">¿Por qué suscribirte?</p> -->
+                <p style="font-size:16px;max-width:550px">
+                    En Terapic Fisic Helper tendrás una buena atención, en el que quedarás a gusto con los servicios brindados. Asimismo, los profesionales con los que contamos estarán 100% a tu disposición para cualquier inconveniente que tengas.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-1 container " style="padding-right:5%;padding-left:5%">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="country-wrapper ">
+                <div style="padding: 10px;background-color: white;">
+                    <img style="max-height:200px" class="country-image" src="assets/img/paso1.png" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <mat-card-header>
+                        <div class="d-flex justify-content-center flex-column">
+                            <p style="font-size:20px;font-weight:500;max-width:400px;color: white;">
+                                Paso 1:
+                            </p>
+                            <p style="text-align: right;color: whitesmoke;">
+                                Create una cuenta en nuestra forma dependiendo de el tipo de servicio que esperas.
+                            </p>
+                        </div>
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-1 container " style="padding-right:5%;padding-left:5%">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <div class="d-flex justify-content-center flex-column">
+                        <mat-card-header>
+                            <div class="d-flex justify-content-center flex-column">
+                                <p style="font-size:20px;font-weight:500;max-width:400px;color: white;">
+                                    Paso 2:
+                                </p>
+                                <p style="text-align: right;color: whitesmoke;">
+                                    Selecciona uno de nuestros planes, el que mejor te convenga sin ningún compromiso.
+                                </p>
+                            </div>
+                        </mat-card-header>
+                    </div>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="country-wrapper ">
+                <div style="padding: 10px;background-color: white;">
+                    <img style="max-height:300px" class="country-image" src="assets/img/paso2.png" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-1 container " style="padding-right:5%;padding-left:5%">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="country-wrapper ">
+                <div style="padding: 10px;background-color: white;">
+                    <img style="max-height:300px" class="country-image" src="assets/img/paso3.png" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <mat-card-header>
+                        <div class="d-flex justify-content-center flex-column">
+                            <p style="font-size:20px;font-weight:500;max-width:400px;color: white;">
+                                Paso 3:
+                            </p>
+                            <p style="text-align: right;color: whitesmoke;">
+                                Selecciona a uno de nuestros profecionales para un tratamiento totalmente especializado.
+                            </p>
+                        </div>
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-1 container " style="padding-right:5%;padding-left:5%">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <div class="d-flex justify-content-center flex-column">
+                        <mat-card-header>
+                            <div class="d-flex justify-content-center flex-column">
+                                <p style="font-size:20px;font-weight:500;max-width:400px;color: white;">
+                                    Paso 4:
+                                </p>
+                                <p style="text-align: right;color: whitesmoke;">
+                                    Escoge uno de los horarios de nuestros profecionales a tiempo completo. Siempre habrá una alternativa perfecta a tus horarios.
+                                </p>
+                            </div>
+                        </mat-card-header>
+                    </div>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="country-wrapper ">
+                <div style="padding: 10px;background-color: white;">
+                    <img style="max-height:300px" class="country-image" src="assets/img/paso4.png" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-1 container " style="padding-right:5%;padding-left:5%">
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="country-wrapper ">
+                <div style="padding: 10px;background-color: white;">
+                    <img style="max-height:300px" class="country-image" src="assets/img/paso5.png" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <mat-card-header>
+                        <div class="d-flex justify-content-center flex-column">
+                            <p style="font-size:20px;font-weight:500;max-width:400px;color: white;">
+                                Paso 5:
+                            </p>
+                            <p style="text-align: right;color: whitesmoke;">
+                                Conectate en los horarios establecidos por ti y el profecional y disfruta desde cualquier parte la atención de nuestros profecionales.
+                            </p>
+                        </div>
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div class="countries-wrapper container " style="padding:5%; ">
+        <mat-grid-list [cols]="breakpoint " rowHeight="3:2 " (window:resize)="onResize($event) ">
+            <mat-grid-tile [routerLink]="'/properties'" *ngFor="let item of personas" class="country-wrapper ">
+                <div class="country">
+                    <div class="country-content">
+                        <img class="country-image" [src]="item.image" />
+                        <div class="pt-3 pb-1">{{item.name}}</div>
+                        <div class="pt-2 content" style="max-width:180px;">{{item.content}}</div>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="section-1 container plans" style="padding:5%; ">
+        <div class="h-50 w-100 d-flex justify-content-center px-4 py-4">
+            <div class="content d-flex flex-column justify-content-start px-4">
+                <p style="font-size:25px ">¿Ya probaste nuestro planes?</p>
+                <p style="font-size:16px; max-width: 1000px;">
+                    No te pierdas la oportunidad de estar con nosotros!!! Te daremos un trato profecional y asumiremos la responsabilidad de lograr tu rehabilitacion, tu recuperacion y mejora son nuestros compromisos.
+                </p>
+            </div>
+        </div>
+        <mat-grid-list [cols]="cols" [rowHeight]="rowheight" (window:resize)="onResize($event) ">
+            <mat-grid-tile class="section-1-wrapper ">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <div class="d-flex justify-content-center flex-column">
+                        <mat-card-header class="border:2px solid #272B4E">
+                            <div class="d-flex justify-content-center flex-column">
+                                <p style="text-align: center;color: whitesmoke; font-size: 25px">
+                                    Plan Free
+                                </p>
+                                <p style="max-width:400px;color: white;">
+                                    Al inscribirte a nuestra compañía, tendrás un mes gratis sin pago alguno gozando de todos los servicios que te brindamos sin restricción alguna.
+                                </p>
+                                <p style="max-width:400px;color: white;font-size:35px;">
+                                    Free
+                                </p>
+                            </div>
+                        </mat-card-header>
+                    </div>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile class="section-1-wrapper">
+                <mat-card class="py-4 mx-4" style="background-color: #1E203D;">
+                    <div class="d-flex justify-content-center flex-column">
+                        <mat-card-header>
+                            <div class="d-flex justify-content-center flex-column">
+                                <p style="text-align: center;color: whitesmoke; font-size: 25px">
+                                    Plan Mensual
+                                </p>
+                                <p style="max-width:400px;color: white;">
+                                    A partir del segundo mes, pagarás un monto de 45 soles mensual, para así, poder utilizar todos los servicios que la compañía Terapic Fisic Helper te ofrece.
+                                </p>
+                                <p style="max-width:400px;color: white;font-size:35px;">
+                                    s/45
+                                </p>
+                            </div>
+                        </mat-card-header>
+                    </div>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="d-flex countries-wrapper container " style="padding:5%; ">
+        <div class="d-flex justify-content-center flex-column" style="color: white;">
+            <!-- <div class="text">lorem</div>
+            <div class="subtext">lorem</div>
+            <div class="subtext">lorem</div> -->
+            <div class="subtext" style="max-width: 200px;">Si necesitas más información acerca de la compañía no dudes en contactarte con nosotros.</div>
+        </div>
+        <div class="px-4">
+            <div class="separator"></div>
+        </div>
+        <div class="d-flex justify-content-center flex-column" style="color: white;">
+            <div class="text" style="font-weight: 600;">
+                CONTACTO
+            </div>
+            <div class="subtext">Dirección: Jr. Stephen Crane 217, San Borja 15037</div>
+            <div class="subtext">Correo: terapicfisic_helper@gmail.com</div>
+            <div class="subtext">Celular: 952252313 / 963139477</div>
+        </div>
+    </div>
+
+</div>

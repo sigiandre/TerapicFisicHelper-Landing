@@ -1,0 +1,30 @@
+<div class="prop-container pt-2" [routerLink]="[prop.id]">
+  <div class="image-col">
+    <div class="image-wrapper">
+      <img
+        class="image"
+        src="{{prop.imageurl}}"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="info-col">
+    <div class="price" style="font-size: 25px; font-weight: 500;">{{ prop.cost }} por mes</div>
+    <div class="direction">
+      {{ prop.description }}
+    </div>
+    <div class="description">
+      {{ prop.nRoom }} cuartos,
+      {{ prop.cant_bath }} baños,
+      {{ prop.size }} m cuadrados,
+      {{ prop.cant_beds }} camas,
+    </div>
+    <div class="rate">
+      {{ prop.score }}
+      <span class="material-icons">
+        stars
+      </span>
+    </div>
+  </div>
+</div>
+<div class="hr"></div>

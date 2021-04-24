@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Login</h2>
+<mat-dialog-content class="mat-typography">
+    <form class="example-form"  [formGroup]="form" (ngSubmit)="submit(form.value)">
+        <p>
+            <mat-form-field class=" w-100 example-full-width">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class=" w-100 example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" formControlName="password" matInput>
+            </mat-form-field>
+        </p>
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-button color="primary" type="submit" [mat-dialog-close]="true" style="background-color:#30A6CA;color:white">Iniciar Sesión</button>
+      </form>
+    </mat-dialog-content>

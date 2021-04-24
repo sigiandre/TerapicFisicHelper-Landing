@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <p>
+    <mat-form-field appearance="standard" class="w-100">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="standard" class="w-100">
+      <mat-label>Description</mat-label>
+      <textarea rows="6" formControlName="description" matInput></textarea>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="standard" class="w-100">
+      <mat-label>Premiere at</mat-label>
+      <input formControlName="premiereTimestamp" matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-slide-toggle color="primary" formControlName="available">Available</mat-slide-toggle>
+  </p>
+  <p class="text-right">
+    <button type="button" routerLink="/movies" mat-button class="mr-2">Back</button>
+    <button [disabled]="!form?.valid" type="submit" mat-flat-button color="primary">Submit</button>
+  </p>
+</form>

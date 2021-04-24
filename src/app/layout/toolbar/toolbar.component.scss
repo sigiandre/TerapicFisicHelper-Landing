@@ -1,0 +1,58 @@
+ .navbar {
+     position: fixed;
+     background-color: transparent;
+     background-color: #272B4E;
+     z-index: 10;
+     display: flex;
+     @media (max-width: 767px) {
+         display: none;
+     }
+ }
+ 
+ .navbar-mobile {
+     position: fixed;
+     background-color: transparent;
+     background-color: #272B4E;
+     z-index: 10;
+     display: none;
+     @media (max-width: 767px) {
+         display: flex;
+     }
+ }
+ 
+ .navbar-inverse {
+     background-color: #272B4E;
+     color: black;
+     -webkit-box-shadow: 10px 10px 58px -17px rgba(0, 0, 0, 0.75);
+     -moz-box-shadow: 10px 10px 58px -17px rgba(0, 0, 0, 0.75);
+     box-shadow: 10px 10px 58px -17px rgba(0, 0, 0, 0.75);
+ }
+ 
+ a {
+     text-decoration: none;
+     color: white;
+ }
+ 
+ a:hover,
+ a:active {
+     color: lightgray;
+ }
+ 
+ .nav-caption {
+     display: inline-block;
+     padding-left: 6px;
+ }
+ 
+ .drag {
+     display: none;
+     @media (max-width: 767px) {
+         display: flex;
+         position: fixed;
+         top: 56px;
+         left: 0px;
+         background-color: #272B4E;
+         min-height: 200px;
+         min-width: 100vw;
+         z-index: 800;
+     }
+ }
